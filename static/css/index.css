@@ -1,0 +1,17 @@
+video {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);  
+}
+
+section {
+    padding-top: 10rem;
+}
+
+p, li {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+h2, h4  {
+    font-family: 'Young Serif', serif;
+}
+

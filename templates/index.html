@@ -1,0 +1,666 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Solar</title>
+    <link rel="stylesheet" href="../static/css/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Young+Serif&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Solar</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/favicon.png" type="">
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- font awesome style -->
+  <link href="../static/css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="../static/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="../static/css/responsive.css" rel="stylesheet" />
+  
+  </head>
+            <!-- Navabar -->
+            <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+            <ul class="nav justify-content-end">
+              <li class="nav-item">
+                <a class="nav-link" href="#camera">Detect your apple</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#team">Our Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-disabled="true" href="https://www.nal.usda.gov/" target="_blank"> News</a>
+              </li>
+            </ul>
+          </nav>
+            <!-- navbar End -->
+        
+
+
+        <!-- Information Start -->
+<body>
+        <section class="information">
+          <div class="container text-center">
+            <div class="row">
+              <div class="col-sm-6">
+                <h2 class="text-left" > <a name = "home">INKA </a></h2>
+                <h4 class="text-left">Inspeksi Kualitas Apel</h4><br>
+                <p style="text-align: justify;text-justify: inter-word;">
+                  Aplikasi INKA (Inspeksi Kualitas Apel) adalah sebuah solusi perangkat lunak yang dirancang untuk membantu dalam proses inspeksi kualitas apel. Aplikasi ini ditujukan untuk berbagai pihak yang terlibat dalam industri pertanian, seperti petani, produsen, distributor, dan pengekspor apel.
+                </p>
+              </div>
+              <div class="col-sm-6">
+                <img src="../static/Images/apel .gif " alt="apple" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </body>
+        <!-- Information End -->
+
+
+
+
+       <!-- Camera Start -->  
+
+  <section class="aplikasi">
+
+      <div class="camera mt-9">
+        <div class="col-sm-9">
+        <h2 class="text-left"><a name = "camera">  Capture your <br>   Apple Now </a></h2>
+        <p style="text-align: justify;text-justify: inter-word;">
+          Dengan menggunakan domain AI Compiuter Vision (CV), aplikasi INKA akan mengambil gambar apel yang telah tersedia dan akan langsung dianalisa dengan teknologi AI yang dapat membuat sebuah keputusan berdasarkan data yang berada di dalam sistem. Dengan itu, aplikasi INKA akan memperlihatkan hasil analisa dari buah apel yang telah di potret dan mengklasifikasikan apel tersebut ke “Apel Segar” atau “Apel Tidak Segar”
+        </p>
+        </div>
+        <div class="mx-auto p-2 row justify-content-center fs-5">
+          <div class="row gx-5">
+            <div class="col-5">
+              <video class="p-2" id="preview"></video>
+            </div>
+            <div class="col-2">
+              <canvas class="p-3" style="display: none;" id="output"></canvas>
+            </div>
+            <div class="col-5">
+              <img class="p-2" id="result">
+            </div>
+          </div>
+          <div class="row">
+            <button type="button" class="col-6 btn btn-success" id="capture">Capture</button>
+            <button type="button" class="col-6 btn btn-info" id="capture">Analize</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="../static/js/camera.js" ></script>
+    <script src="../testJson.js" ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+      <!-- Camera end -->
+
+
+
+<!--  Result Start -->
+
+<section class="about_section layout_padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-md-6">
+        <div class="detail-box">
+          <a href="#camera">
+            Back to camera page
+          </a>
+          <br>
+          <h2>
+            Apel anda Segar
+          </h2>
+          <p>
+            Apel segar memiliki tampilan yang sempurna dan biasanya memiliki kulit yang mengkilap dan halus yang bisa berwarna merah, hijau, atau campuran dari warna-warna tersebut, tergantung pada jenisnya. Permukaan apel segar memiliki kilau alami yang membuatnya tampak memikat secara visual. Apel segar memiliki tingkat kerenyahan yang sempurna apabila terasa keras saat disentuh, dan tidak ada bagian yang lembek. Kesegarannya juga dapat ditentukan oleh batang dan kelopak, yang merupakan daun kecil di pangkalnya, yang masih utuh. Singkatnya, apel segar memiliki kulit yang sempurna, warna yang cerah, dan penampilan yang sehat yang membuatnya menjadi pilihan kondisi apel yang baik.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--  Result End -->
+
+<!-- About start -->
+
+ <section class="service_section layout_padding">
+  <div class="container ">
+    <div class="heading_container heading_center">
+      <h2> <a name = "about">About Us </a></h2>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-md-4 mx-auto">
+        <div class="box ">
+          <div class="img-box">
+            <img src="images/s1.png" alt="" />
+          </div>
+          <div class="detail-box">
+            <h5>
+              Masalah
+            </h5>
+            <p>
+ 
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  view more
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Masalah</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Inspeksi tenaga manusia dalam memeriksa buah apel dapat menghadapi beberapa kesulitan, termasuk:<br>
+          1. Subjektivitas: Penilaian buah apel oleh manusia dapat menjadi subjektif. Orang yang berbeda mungkin memiliki pandangan yang berbeda tentang kualitas buah yang sama.<br>
+          2. Keterbatasan visual: Manusia mungkin sulit melihat dengan jelas kerusakan mikroskopis atau masalah internal pada buah apel.<br>
+          3. Waktu: Inspeksi manual oleh manusia memerlukan waktu, terutama jika buah apel harus diperiksa dalam jumlah besar.<br>
+          4. Kelelahan dan kesalahan: Manusia dapat lelah setelah memeriksa banyak buah, yang dapat meningkatkan kemungkinan kesalahan dalam inspeksi.<br>
+          5. Subjektivitas: Manusia mungkin kurang konsisten dalam menilai kualitas buah apel dibandingkan dengan metode inspeksi otomatis.<br>
+          
+          Oleh karena itu, penggunaan teknologi inspeksi otomatis dengan bantuan mesin penglihatan komputer dan sensor dapat membantu mengatasi beberapa masalah ini untuk meningkatkan efisiensi dan konsistensi dalam inspeksi buah apel.
+                        </h6>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 mx-auto">
+        <div class="box ">
+          <div class="img-box">
+            <img src="images/s2.png" alt="" />
+          </div>
+          <div class="detail-box">
+            <h5>
+              Solusi
+            </h5>
+            <p>
+             <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  view more
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Solusi</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6> Penggunaan kecerdasan buatan (AI) dalam inspeksi buah apel dapat memberikan sejumlah solusi yang bermanfaat, seperti:<br>
+          1. Inspeksi Otomatis: AI dapat digunakan untuk memeriksa buah apel secara otomatis menggunakan kamera dan sensor. Ini membantu dalam mendeteksi cacat, kerusakan, atau masalah lainnya dengan cepat dan akurat.<br>
+          2. Klasifikasi Kualitas: AI dapat mengklasifikasikan buah apel ke dalam kategori kualitas berdasarkan ukuran, warna, keutuhan kulit, dan atribut lainnya. Ini membantu dalam pemisahan buah apel yang sesuai untuk berbagai tujuan, seperti penjualan langsung atau pengolahan.<br>
+          3. Pengoptimalan Produksi: AI dapat membantu petani untuk memantau kondisi pertumbuhan buah apel dengan menggunakan sensor dan data cuaca. Ini dapat membantu dalam pengelolaan pertanian yang lebih efisien dan pengambilan keputusan berdasarkan data.<br>
+          4. Prediksi Produksi: AI dapat digunakan untuk meramalkan hasil produksi buah apel berdasarkan sejumlah faktor, seperti cuaca, kualitas tanah, dan praktik pertanian. Ini membantu petani dalam perencanaan dan manajemen persediaan.<br>
+          5. Pengurangan Pemborosan: Dengan inspeksi otomatis yang akurat, AI dapat membantu mengurangi pemborosan buah apel yang tidak memenuhi standar kualitas, sehingga mengurangi limbah dan biaya.<br>
+          6. Pemantauan Pasca Panen: AI dapat digunakan untuk memantau kondisi pasca panen buah apel, seperti suhu dan kelembaban, yang penting untuk menjaga kesegaran dan kualitas buah.<br>
+          </h6>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4 mx-auto">
+        <div class="box ">
+          <div class="img-box">
+            <img src="images/s3.png" alt="" />
+          </div>
+          <div class="detail-box">
+            <h5>
+              Benefit
+            </h5>
+            <p>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  view more
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">BENEFIT</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6> <p style="text-align: left;">Untuk mendeteksi apel secara real-time dan memberikan hasil "apel segar" atau "apel tidak segar" dengan menggunakan AI, dapat mengikuti beberapa langkah berikut:<br>
+          1. Kumpulkan Data: Kumpulkan dataset gambar apel segar dan apel tidak segar yang beragam. Data ini akan digunakan untuk melatih model AI.<br>
+          2. Preprocessing Data: Proses data dengan mengubah gambar menjadi format yang sesuai untuk pelatihan model, seperti mengubah ukuran gambar, normalisasi warna, dan lainnya.<br>
+          3. Pelatihan Model: Gunakan teknik deep learning, seperti Convolutional Neural Networks (CNN), untuk melatih model AI. Model ini akan belajar mengenali ciri-ciri yang membedakan apel segar dan tidak segar dari dataset yang telah dikumpulkan.<br>
+          4. Validasi dan Evaluasi: Selama pelatihan, validasi dan evaluasi model untuk memastikan akurasi deteksi yang baik.<br>
+          5. Integrasi dengan Kamera: Pasang kamera pada tempat inspeksi buah apel, seperti jalur produksi atau konveyor. Model AI akan mengambil gambar apel secara real-time dari kamera.<br>
+          6. Deteksi Real-Time: Jalankan model AI pada gambar yang diterima dari kamera. Model akan mengidentifikasi apel dan memberikan hasil "apel segar" atau "apel tidak segar" berdasarkan ciri-ciri yang telah dipelajari selama pelatihan.<br>
+          7. Output: Berikan hasil deteksi kepada operator atau sistem kontrol untuk tindakan selanjutnya, seperti pemisahan apel yang tidak segar dari yang segar.<br>
+        </p></h6> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="btn-box">
+      <a href="#home">
+        Back to home
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- About end -->
+
+
+
+
+  <div class="hero_area">
+
+    <div class="hero_bg_box">
+      <div class="bg_img_box">
+        <img src="images/hero-bg.png" alt="">
+      </div>
+    </div>
+
+
+  <!-- team section -->
+  <section class="team_section layout_padding">
+    <div class="container-fluid">
+      <div class="heading_container heading_center">
+        <h2 class="">
+          <a name = "team">Our <span> Team</span> </a>
+        </h2>
+      </div>
+
+      <div class="team_container">
+        <div class="row">
+          <div class="col-lg-3 col-sm-6">
+            <div class="box ">
+              <div class="img-box">
+                <img src="../static/Images/rifqi.png" class="img1" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Rifqi Baihaqi Sabhan
+                </h5>
+                <p>
+                  Front End
+                </p>
+              </div>
+              <div class="social_box">
+                <a href="#">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-sm-6">
+            <div class="box ">
+              <div class="img-box">
+                <img src="../static/Images/elsa.png" class="img1" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Elsa Hujlyn Purba
+                </h5>
+                <p>
+                  UI/UX
+                </p>
+              </div>
+              <div class="social_box">
+                <a href="#">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <div class="box ">
+              <div class="img-box">
+                <img src="../static/Images/samuel.png" class="img1" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Samuel Genaro
+                </h5>
+                <p>
+                  Back End 1 
+                </p>
+              </div>
+              <div class="social_box">
+                <a href="#">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <div class="box ">
+              <div class="img-box">
+                <img src="../static/Images/sri.png" class="img1" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Sri Indriyani
+                </h5>
+                <p>
+                  Back End 2 
+                </p>
+              </div>
+              <div class="social_box">
+                <a href="#">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <div class="box ">
+              <div class="img-box">
+                <img src="../static/Images/gabriel.png" class="img1" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Gabriella Kartika Sagala
+                </h5>
+                <p>
+                  Project Report 1
+                </p>
+              </div>
+              <div class="social_box">
+                <a href="#">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <div class="box ">
+              <div class="img-box">
+                <img src="../static/Images/yulinda.png" class="img1" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Yulinda Putri Pratama
+                </h5>
+                <p>
+                  Project Report 2 
+                </p>
+              </div>
+              <div class="social_box">
+                <a href="#">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>         
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end team section -->
+
+  <!-- info section -->
+
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_contact">
+            <h4>
+              Address
+            </h4>
+            <div class="contact_link_box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Location
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Call +01 1234567890
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  demo@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="info_social">
+            <a href="">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_detail">
+            <h4>
+              Info
+            </h4>
+            <p>
+              necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-2 mx-auto info_col">
+          <div class="info_link_box">
+            <h4>
+              Links
+            </h4>
+            <div class="info_links">
+              <a class="" href="#home">
+                Home
+              </a>
+              <a class="active" href="#camera">
+                Detect your apple
+              </a>
+              <a class="" href="#about">
+                About
+              </a>
+              <a class="" href="#team">
+                Our Team
+              </a>
+              <a class="" href="why.html">
+                Why Us
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col ">
+          <h4>
+            Subscribe
+          </h4>
+          <form action="#">
+            <input type="text" placeholder="Enter email" />
+            <button type="submit">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <section class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="https://html.design/">Free Html Templates</a>
+      </p>
+    </div>
+  </section>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- custom js -->
+  <script type="text/javascript" src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+
+</body>
+</html>

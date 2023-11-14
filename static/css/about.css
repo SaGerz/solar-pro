@@ -1,0 +1,40 @@
+/* styles.css */
+@keyframes pop-up {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #007BFF;
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #007BFF;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+p {
+    text-align: justify;
+    animation: pop-up 1s ease-in-out; /* Menggunakan animasi pop-up selama 1 detik */
+}
+
